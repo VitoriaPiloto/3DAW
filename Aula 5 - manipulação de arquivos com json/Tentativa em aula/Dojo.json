@@ -1,0 +1,8 @@
+{ 
+	"Alunos": [
+	{"nome": "Zé da Silva",
+	"matricula" : "123"} , 
+	{"nome": "Maria das Rosas",
+	"matricula" : "1243"} 
+	]
+}
