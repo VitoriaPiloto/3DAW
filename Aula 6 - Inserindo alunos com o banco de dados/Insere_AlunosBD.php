@@ -40,7 +40,7 @@ echo "aluno incluido";
     <title>Document</title>
 </head>
 <body>
-    <form action="aa.php" method="POST">
+    <form action="Insere_AlunosBD.php" method="POST">
         <fieldset>
             <label for="nome">Nome: </label>
             <input type="text" id="nome" name="nome"><br><br>
