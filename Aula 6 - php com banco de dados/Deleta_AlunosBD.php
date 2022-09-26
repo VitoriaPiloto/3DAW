@@ -7,7 +7,7 @@
        if($_SERVER["REQUEST_METHOD"] == "POST"){
         $mat = $_POST["matricula"];
 
-        $conn = new mysqli($servidor, $usuario, $senha, $bancodedados);
+        $conn = new mysqli($servidor, $usuario, $senha, $bancodeDados);
         if($conn->connect_error){
             die("Conexao com banco de dados falhou.");
         }
