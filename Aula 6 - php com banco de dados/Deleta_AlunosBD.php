@@ -1,4 +1,5 @@
 <?php
+    $ehPost=true;
     $servidor="localhost";
     $usuario = "root";
     $senha = "";
@@ -14,6 +15,8 @@
 
         $sql = "DELETE FROM `alunos` WHERE `matricula` = $mat";
         $result = $conn->query($sql);
+    } else {
+           ehPost=false;
     }
 ?>
 <!DOCTYPE html>
