@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Alterar Seleção</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script type="text/javascript" src="alterarSelecao.js"></script>
+<body>
+    <ul>
+        <li><a href="inserirSelecao.html">Inserir Seleção</a></li>
+        <li><a href="alterarSelecao.html">Alterar Seleção</a></li>
+        <li><a href="cadastroJogo.html">Cadastrar Jogo</a></li>
+        <li><a href="calendarioJogo.html">Resultado do Jogo</a></li>
+        <li><a href="calendarioTodo.html">Calendário Inteiro</a></li>
+        <li><a href="calendarioSelecao.html">Calendário de uma Seleção</a></li>
+        <li><a href="calendarioGrupo.html">Calendário de um Grupo</a></li>
+    </ul>
+    <form id="formBusca">
+        <fieldset>
+            <legend>Insira a seleção que deseja alterar</legend>
+            <label>Nome da Seleção:</label>
+            <input type="text" name="nome" id="nome"><br><br>
+            <input type="button" name="envio" value="Enviar" onclick="buscarSelecao();">
+        </fieldset>
+    </form>
+
+    <form id="formAlterar" style="display:none">
+        <fieldset style="margin-top: 10px;">
+            <legend>Inisra os novos dados</legend>
+
+            <label>Nome Novo:</label>
+            <input type="text" name="nome" id="nomeAlterado" value=""><br><br>
+            <label>Tecnico Novo:</label>
+            <input type="text" name="tecnico" id="tecnicoAlterado" value=""><br><br>
+            <label>Grupo Novo:</label>
+            <input type="text" name="grupo" id="grupoAlterado" value=""><br><br>
+            <label>Pontos Novos:</label>
+            <input type="text" name="ponto" id="pontoAlterado" value=""><br><br>
+            <input type="button" name="envio" value="Enviar" onclick="enviarForm();">
+        </fieldset>
+    </form>
+</body>
+
+</html>

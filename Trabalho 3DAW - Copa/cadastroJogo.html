@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cadastrar Jogo CRUD Copa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="estilo.css">
+    <script type="text/javascript" src="cadastroJogo.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li><a href="inserirSelecao.html">Inserir Seleção</a></li>
+        <li><a href="alterarSelecao.html">Alterar Seleção</a></li>
+        <li><a href="cadastroJogo.html">Cadastrar Jogo</a></li>
+        <li><a href="calendarioJogo.html">Resultado do Jogo</a></li>
+        <li><a href="calendarioTodo.html">Calendário Inteiro</a></li>
+        <li><a href="calendarioSelecao.html">Calendário de uma Seleção</a></li>
+        <li><a href="calendarioGrupo.html">Calendário de um Grupo</a></li>
+    </ul>
+    <form id="formJogo">
+        <fieldset>
+            <legend>Insira os dados do jogo</legend>
+            <label>Data:</label>
+            <input type="text" name="data" id="data"><br><br>
+            <label>Hora:</label>
+            <input type="text" name="hora" id="hora"><br><br>
+            <label>Local:</label>
+            <input type="text" name="local" id="local"><br><br>
+            <label>Nome da seleção 1:</label>
+            <input type="text" name="selecao1" id="selecao1"><br><br>
+            <label>Nome da seleção 2:</label>
+            <input type="text" name="selecao2" id="selecao2"><br><br>
+            <label>Gols da Seleção 1:</label>
+            <input type="text" name="gols1" id="gols1"><br><br>
+            <label>Gols da Seleção 2:</label>
+            <input type="text" name="gols2" id="gols2"><br><br>
+            <input type="button" name="envio" value="Enviar" onclick="enviarForm();">
+        </fieldset>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Calendário Seleção Copa</title>
+    <meta name="viewport" content="widtd=device-widtd, initial-scale=1">
+    <link rel="stylesheet" href="estilo.css">
+    <script type="text/javascript" src="calendarioSelecao.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li><a href="inserirSelecao.html">Inserir Seleção</a></li>
+        <li><a href="alterarSelecao.html">Alterar Seleção</a></li>
+        <li><a href="cadastroJogo.html">Cadastrar Jogo</a></li>
+        <li><a href="calendarioJogo.html">Resultado do Jogo</a></li>
+        <li><a href="calendarioTodo.html">Calendário Inteiro</a></li>
+        <li><a href="calendarioSelecao.html">Calendário de uma Seleção</a></li>
+        <li><a href="calendarioGrupo.html">Calendário de um Grupo</a></li>
+    </ul>
+
+    <form id="form">
+        <fieldset>
+            <legend style="font-size: 20px;">Inisra o nome da Seleção que está buscando</legend>
+            <label>Nome da Seleção:</label>
+            <input type="text" name="nome" id="nome"><br><br>
+            <input type="button" name="envio" value="Enviar" onclick="carregaJogo();">
+        </fieldset>
+    </form>
+
+    <table id="tabela">
+        <tr>
+            <td>Data</td>
+            <td>Hora</td>
+            <td>Local</td>
+            <td>Equipe A</td>
+            <td>Gols</td>
+            <td>Equipe B</td>
+            <td>Gols</td>
+        </tr>
+    </table>
+</body>
+
+</html>

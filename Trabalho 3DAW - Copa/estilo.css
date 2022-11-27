@@ -1,0 +1,34 @@
+*{
+    display: flex;
+    justify-content: center;
+}
+table {
+    border: 2px solid green;
+    border-collapse: collapse;
+}
+
+tr {
+    border: 2 px solid green;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 3px;
+    border: 2px solid green;
+    border-collapse: collapse;
+}
+
+fieldset {
+    border: 3px solid  #ffdf00;
+    width: 25%;
+}
+
+legend {
+    color: blue;
+    padding: 5px 10px;
+}
+
+ul{
+    list-style-type: none;
+    text-align: center;
+}
