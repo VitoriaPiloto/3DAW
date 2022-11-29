@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>INCLUIR CLIENTES</title>
+    <script type="text/javascript" src="incluirClientes.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li><a href="incluirCarro.html"> Incluir Carro </a></li>
+        <!-- <li><a href="alterarCarro.html"> Alterar Carro </a></li>
+        <li><a href="excluirCarro.html"> Excluir Carro </a></li> -->
+        <li><a href="buscarCarroCidade.html">  Buscar Carro na Cidade </a></li>
+        <li><a href="buscarCarroEspecifico.html">  Buscar Carro Específico </a></li>
+        <br>
+        <li><a href="incluirClientes.html"> Incluir Clientes </a></li>
+        <!-- <li><a href="alterarClientes.html"> Alterar Clientes </a></li>
+        <li><a href="excluirClientes.html"> Excluir Clientes </a></li> -->
+        <br>
+        <li><a href="realizarAluguel.html"> Realizar Aluguel </a></li>
+    </ul>
+    <form id="formIncluir">
+        <fieldset>
+            <legend>Digite os Dados do Cliente</legend>
+
+            <label>Nome:</label>
+            <input type="text" name="nome" id="nome"><br><br>
+            <label>Telefone:</label>
+            <input type="text" name="telefone" id="telefone"><br><br>
+            <label>Cidade:</label>
+            <input type="text" name="cidade" id="cidade"><br><br>
+            <input type="button" name="envio" value="Enviar" onclick="enviarForm();">
+        </fieldset>
+    </form>
+</body>
+
+</html>

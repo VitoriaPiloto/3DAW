@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>REALIZAR ALUGUEL</title>
+    <script type="text/javascript" src="realizarAluguel.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li><a href="incluirCarro.html"> Incluir Carro </a></li>
+        <!-- <li><a href="alterarCarro.html"> Alterar Carro </a></li>
+        <li><a href="excluirCarro.html"> Excluir Carro </a></li> -->
+        <li><a href="buscarCarroCidade.html">  Buscar Carro na Cidade </a></li>
+        <li><a href="buscarCarroEspecifico.html">  Buscar Carro Específico </a></li>
+        <br>
+        <li><a href="incluirClientes.html"> Incluir Clientes </a></li>
+        <!-- <li><a href="alterarClientes.html"> Alterar Clientes </a></li>
+        <li><a href="excluirClientes.html"> Excluir Clientes </a></li> -->
+        <br>
+        <li><a href="realizarAluguel.html"> Realizar Aluguel </a></li>
+    </ul>
+    <form id="formIncluir">
+        <fieldset>
+            <legend>Digite os dados necessários para realizar o aluguel de um carro</legend>
+
+            <label>ID do cliente:</label>
+            <input type="text" name="idCliente" id="idCliente"><br><br>
+            <label>ID do carro:</label>
+            <input type="text" name="idCarro" id="idCarro"><br><br>
+            <label>Período:</label>
+            <input type="text" name="periodo" id="periodo"><br><br>
+            <input type="button" name="envio" value="Enviar" onclick="enviarForm();">
+        </fieldset>
+    </form>
+</body>
+
+</html>

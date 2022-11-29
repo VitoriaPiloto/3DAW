@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>BUSCAR CARROS NA CIDADE</title>
+    <script type="text/javascript" src="buscarCarroCidade.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li><a href="incluirCarro.html"> Incluir Carro </a></li>
+        <!-- <li><a href="alterarCarro.html"> Alterar Carro </a></li>
+        <li><a href="excluirCarro.html"> Excluir Carro </a></li> -->
+        <li><a href="buscarCarroCidade.html">  Buscar Carro na Cidade </a></li>
+        <li><a href="buscarCarroEspecifico.html">  Buscar Carro Específico </a></li>
+        <br>
+        <li><a href="incluirClientes.html"> Incluir Clientes </a></li>
+        <!-- <li><a href="alterarClientes.html"> Alterar Clientes </a></li>
+        <li><a href="excluirClientes.html"> Excluir Clientes </a></li> -->
+        <br>
+        <li><a href="realizarAluguel.html"> Realizar Aluguel </a></li>
+    </ul>
+    <fieldset>
+        <legend>Digite o nome da cidade que deseja buscar o carro</legend>
+        <label>Cidade:</label>
+        <input type="text" name="cidade" id="cidade"><br><br>
+        <input type="button" name="envio" value="Enviar" onclick="carregaCarro();">
+    </fieldset>
+    </form>
+    <hr>
+    <table id="tabela">
+        <tr>
+            <td>Nome</td>
+            <td>Marca</td>
+            <td>Categoria</td>
+            <td>Cidade</td>
+            <td>Valor</td>
+            <td>Disponível</td>
+        </tr>
+    </table>
+</body>
+
+</html>
