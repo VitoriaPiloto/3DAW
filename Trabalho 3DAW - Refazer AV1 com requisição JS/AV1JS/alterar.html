@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Alterar Disciplina</title>
+    <script>
+        function enviarForm() {
+            let id = document.getElementById("id").value;
+            let nome = document.getElementById("nomeAlt").value;
+            let periodo = document.getElementById("periodoAlt").value;
+            let preRequisito = document.getElementById("preRequisitoAlt").value;
+            let credito = document.getElementById("creditoAlt").value;
+
+            let xmlHttp = new XMLHttpRequest();
+            xmlHttp.open("GET", "http://localhost/AV1JS/alterar?id=" + id + "&nome=" + nome + "&periodo=" + periodo +
+                "&preRequisito=" + preRequisito + "&credito=" + credito);
+            xmlHttp.send();
+        }
+
+        function buscarDiscp() {
+            let id = document.getElementById("id").value;
+            let xmlHttp = new XMLHttpRequest();
+
+            xmlHttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    let obj = JSON.parse(this.responseText);
+
+                    document.getElementById("nomeAlt").value = obj.nome;
+                    document.getElementById("periodoAlt").value = obj.periodo;
+                    document.getElementById("preRequisitoAlt").value = obj.idPreRequisito;
+                    document.getElementById("creditoAlt").value = obj.credito;
+
+                    let formAlt = document.getElementById("formAlterar");
+                    formAlt.style.display = "block";
+                }
+            }
+            xmlHttp.open("GET", "http://localhost/AV1JS/listarUm?id=" + id);
+            xmlHttp.send();
+        }
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li><a href="incluir.html">Incluir Disciplina</a></li>
+        <li><a href="criarUsuarios.html">Criar Usuário</a></li>
+        <li><a href="alterar.html">Alterar Disciplina</a></li>
+        <li><a href="excluir.html">Excluir Disciplina</a></li>
+        <li><a href="listarUmaDisciplina.html">Listar Um Disciplina</a></li>
+        <li><a href="listarTodos.html">Listar Todos Disciplina</a></li>
+    </ul>
+    <form id="formExcluir">
+        <fieldset>
+            <legend>Digite o ID da Disciplina que irá alterar</legend>
+            <label>ID da Disciplina:</label>
+            <input type="text" name="id" id="id"><br><br>
+            <input type="button" name="envio" value="Enviar" onclick="buscarDiscp();">
+        </fieldset>
+    </form>
+
+    <form id="formAlterar" style="display:none">
+        <fieldset>
+            <label>Nome:</label>
+            <input type="text" name="nome" id="nomeAlt" value=""><br><br>
+            <label>Período:</label>
+            <input type="text" name="periodo" id="periodoAlt" value=""><br><br>
+            <label>Pre-Requisito:</label>
+            <input type="text" name="preRequisito" id="preRequisitoAlt" value=""><br><br>
+            <label>Créditos:</label>
+            <input type="text" name="credito" id="creditoAlt" value=""><br><br>
+            <input type="button" name="envio" value="Enviar" onclick="enviarForm();">
+        </fieldset>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Listar uma disciplina</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        function carregaDisciplina() {
+
+            let id = document.getElementById("id").value;
+            let xmlHttp = new XMLHttpRequest();
+
+            xmlHttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    let objAlunos = this.responseText;
+                    let obj = JSON.parse(this.responseText);
+                    criarLinhaTabela(obj);
+                }
+            }
+            xmlHttp.open("GET", "http://localhost/AV1JS/listarUmaDisciplina?id=" + id);
+            xmlHttp.send();
+
+        }
+
+        function criarLinhaTabela(linha) {
+            let tabela = document.getElementById("tabela");
+            let tr = document.createElement("tr");
+
+            //Coluna ID
+            let tdId = document.createElement("td");
+            textnode = document.createTextNode(linha.id);
+            tdId.appendChild(textnode);
+            tr.appendChild(tdId);
+
+            //Coluna Nome
+            let tdNome = document.createElement("td");
+            textnode = document.createTextNode(linha.nome);
+            tdNome.appendChild(textnode);
+            tr.appendChild(tdNome);
+
+            //Coluna Periodo
+            let tdPeriodo = document.createElement("td");
+            textnode = document.createTextNode(linha.periodo);
+            tdPeriodo.appendChild(textnode);
+            tr.appendChild(tdPeriodo);
+
+            //Coluna Pre-Requisito
+            let tdPreReq = document.createElement("td");
+            textnode = document.createTextNode(linha.idPreRequisito);
+            tdPreReq.appendChild(textnode);
+            tr.appendChild(tdPreReq);
+
+            //Coluna Creditos
+            let tdCreditos = document.createElement("td");
+            textnode = document.createTextNode(linha.credito);
+            tdCreditos.appendChild(textnode);
+            tr.appendChild(tdCreditos);
+
+            tabela.appendChild(tr);
+            tabela.style.display = "table";
+            let input = document.getElementById("id");
+            input.setAttribute("onclick", "location.reload();");
+        }
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li><a href="incluir.html">Incluir Disciplina</a></li>
+        <li><a href="criarUsuarios.html">Criar Usuário</a></li>
+        <li><a href="alterar.html">Alterar Disciplina</a></li>
+        <li><a href="excluir.html">Excluir Disciplina</a></li>
+        <li><a href="listarUmaDisciplina.html">Listar Um Disciplina</a></li>
+        <li><a href="listarTodos.html">Listar Todos Disciplina</a></li>
+    </ul>
+
+    <form id="form">
+        <fieldset>
+            <legend>Digite o ID da disciplina que está buscando</legend>
+            <label>Id da Disciplina:</label>
+            <input type="text" name="id" id="id"><br><br>
+            <input type="button" name="envio" value="Enviar" onclick="carregaDisciplina();">
+        </fieldset>
+    </form>
+
+    <table id="tabela">
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Período</th>
+            <th>Pre-Requisito</th>
+            <th>Créditos</th>
+        </tr>
+    </table>
+</body>
+
+</html>

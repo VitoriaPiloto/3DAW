@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Incluir Disciplinas </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        function enviarForm() {
+            let nome = document.getElementById("nome").value;
+            let periodo = document.getElementById("periodo").value;
+            let preRequisito = document.getElementById("preRequisito").value;
+            let creditos = document.getElementById("creditos").value;
+            let xmlHttp = new XMLHttpRequest();
+
+            xmlHttp.open("GET", "http://localhost/AV1JS/incluir?nome=" + nome +
+                "&preRequisito=" + preRequisito + "&creditos=" + creditos + "&periodo=" + periodo);
+            xmlHttp.send();
+            location.reload();
+        }
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li><a href="incluir.html">Incluir Disciplina</a></li>
+        <li><a href="criarUsuarios.html">Criar Usuário</a></li>
+        <li><a href="alterar.html">Alterar Disciplina</a></li>
+        <li><a href="excluir.html">Excluir Disciplina</a></li>
+        <li><a href="listarUmaDisciplina.html">Listar Um Disciplina</a></li>
+        <li><a href="listarTodos.html">Listar Todos Disciplina</a></li>
+    </ul>
+    <form id="formIncluir">
+        <fieldset>
+            <legend>Digite os Dados da Disciplina</legend>
+            <label>Nome da disciplina:</label>
+            <input type="text" name="nome" id="nome"><br><br>
+            <label>Período da disciplina:</label>
+            <input type="text" name="periodo" id="periodo"><br><br>
+            <label>Id do Pré-Requisito Necessário:</label>
+            <input type="text" name="preRequisito" id="preRequisito"><br><br>
+            <label>Créditos Necessários:</label>
+            <input type="text" name="creditos" id="creditos"><br><br>
+            <input type="button" name="envio" value="Enviar" onclick="enviarForm();">
+        </fieldset>
+    </form>
+</body>
+
+</html>
