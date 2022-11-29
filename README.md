@@ -22,5 +22,7 @@ Repositório para salvar os exercícios e estudos da disciplina de Desenvolvimen
 - [AV2](https://github.com/VitoriaPiloto/3DAW/tree/main/Prova%20AV2%20-%20Aluguel%20de%20Carros)
 	- Utilização de requisições Javascript e retorno php através de JSON.
 7. Trabalhos 
+- [Trabalho AV2 - Prova AV1 em Javascript](https://github.com/VitoriaPiloto/3DAW/tree/main/Trabalho%203DAW%20-%20Refazer%20AV1%20com%20requisi%C3%A7%C3%A3o%20JS/AV1JS)
+	- Refazer a prova da AV1 utilizando os conceitos de requisição javascript em conexão com banco de dados aprendidos ao longo do semestre.
 - [Trabalho AV2 - Seleções da copa](https://github.com/VitoriaPiloto/3DAW/tree/main/Trabalho%203DAW%20-%20Copa)
 	- Utilizações de todos os conceitos aprendidos ao longo do semestre, tal como foi cobrado na AV2.
